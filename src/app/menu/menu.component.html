@@ -1,0 +1,63 @@
+<style>
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(44, 109, 109);
+  }
+
+  button {
+    margin-top: 5px;
+  }
+
+  h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 20px;
+    background-color: rgb(172, 209, 209);
+  }
+
+  .btn {
+    background-color: rgb(51, 51, 51);
+    width: 20vh;
+    height: 7vh;
+    color: rgb(172, 209, 209);
+    border: 3px solid rgb(44, 109, 109);
+  }
+
+  .btn:hover {
+    background-color: rgba(51, 51, 51, 0.644);
+    width: 20vh;
+    height: 7vh;
+    color: rgb(172, 209, 209);
+    border: 3px solid rgb(44, 109, 109);
+  }
+
+</style>
+<div>
+  <div class="body">
+    <div id="card">
+      <h2>{{name}} - Conta nº {{conta}}</h2>
+      <h2>Saldo: {{value}}€</h2>
+      <button class="btn" [routerLink]="['/features','1']">Adicionar</button>
+      <button class="btn" [routerLink]="['/features','2']">Pagamento</button>
+      <button class="btn" [routerLink]="['/features','3']">Transferência</button>
+      <button class="btn" (click)="logout()">Terminar Sessão</button>
+    </div>
+  </div>
+</div>

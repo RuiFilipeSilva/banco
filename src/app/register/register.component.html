@@ -1,0 +1,89 @@
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(44, 109, 109);
+  }
+
+  button {
+    margin-top: 8px;
+  }
+
+  h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  label {
+    color: rgb(51, 51, 51);
+    ;
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 20px;
+    background-color: rgb(172, 209, 209);
+  }
+
+  a {
+    margin-top: 8px;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+  }
+
+  .form-group {
+    width: 50vh
+  }
+
+  .btn {
+    background-color: rgb(51, 51, 51);
+    width: 15vh;
+    color: rgb(172, 209, 209);
+    border: 3px solid rgb(44, 109, 109);
+  }
+
+  .btn:hover {
+    background-color: rgba(51, 51, 51, 0.644);
+    color: rgb(172, 209, 209);
+    border: 3px solid rgb(44, 109, 109);
+  }
+
+</style>
+<div>
+  <form #register="ngForm" (ngSubmit)="onSubmit(register)">
+    <div id="card">
+      <h1>Registo</h1>
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input name="name" id="name" type="text" class="form-control" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" class="form-control" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input name="password" id="password" type="password" class="form-control" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="confPassword">Confirmar Password:</label>
+        <input name="confPassword" id="confPassword" type="password" class="form-control" ngModel required>
+      </div>
+      <button class="btn" type="submit">Entrar</button>
+      <a routerLink="/">Voltar</a>
+    </div>
+  </form>
+
+</div>
